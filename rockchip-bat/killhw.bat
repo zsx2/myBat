@@ -1,0 +1,1 @@
+adb shell "ps -ef | grep composer | busybox awk 'NR==1 {print $2}'| xargs kill" || adb shell "ps -ef | grep composer | tail -1 | busybox awk 'NR==1 {print $2}'| xargs kill"
